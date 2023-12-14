@@ -9,7 +9,7 @@ export const getAnswer = async (messages: Message[]): Promise<Message> => {
             content: message.content
         }
     })
-    const response = await axios.post(`${SERVER_URL}/`, {
+    const response = await axios.post(SERVER_URL, {
         messages: context,
         'operation-type': getNextOperation()
     })
