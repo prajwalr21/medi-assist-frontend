@@ -81,7 +81,7 @@ export const UserInput = ({
 
     return (
         <div onKeyDown={keyCheckHandler} className="flex h-24 text-sm rounded-t-xl rounded-r-xl drop-shadow-xl shadow-xl flex-row p-4 gap-4 justify-center items-center bg-gray-100 fixed bottom-0 w-[50%] left-[50%] translate-x-[-50%]">
-            <input className="w-[80%] px-4 py-2 h-12 rounded-xl placeholder:text-sm" ref={inputRef} type="text" placeholder="Enter your message" />
+            <input className="w-[80%] px-4 py-2 h-12 rounded-xl placeholder:text-sm" ref={inputRef} type="text" placeholder="Enter something like 'I have pain in my elbow'" />
             <button className="px-4 py-3 bg-gray-400 rounded-xl" onClick={sumbitHandler}><IoSend style={{color:'white'}}/></button>
         </div>
     )
