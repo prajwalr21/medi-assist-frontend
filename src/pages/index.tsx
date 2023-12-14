@@ -16,7 +16,7 @@ const defaultMessage = (): Message[] => {
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>(() => defaultMessage())
   return (
-    <div className='min-h-screen w-screen flex flex-col bg-white'>
+    <div className='min-h-screen w-screen flex flex-col bg-white text-black'>
       <nav className='h-14 p-4 bg-gray-100 flex flex-row w-full text-sm items-center'>
         Medical Assistant
       </nav>
