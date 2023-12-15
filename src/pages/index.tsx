@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { ChatContainer } from '../components/ChatContainer'
 import { UserInput } from '../components/UserInput'
 import { introMessage } from '../consts'
