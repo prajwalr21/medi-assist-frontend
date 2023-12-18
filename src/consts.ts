@@ -1,3 +1,5 @@
 export const introMessage = "Hi, welcome to medical chat. How can I help you?"
 export const SERVER_URL = "https://medi-assist-backend.vercel.app"
+export const SOCKET_SERVER_URL = "https://medi-assist-socket.vercel.app"
 // export const SERVER_URL = "http://localhost:4000"
+// export const SOCKET_SERVER_URL = "ws://localhost:5000"

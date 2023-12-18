@@ -19,7 +19,7 @@ export default function Home() {
         Medical Assistant
       </nav>
       <ChatContainer messages={messages} setMessages={setMessages}/>
-      <UserInput messages={messages} setMessages={setMessages}  />
+      <UserInput messages={messages} setMessages={setMessages} placeholder="Enter something like 'I have pain in my elbow'"/>
     </div>
   )
 }
