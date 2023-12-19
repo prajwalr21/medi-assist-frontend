@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 import { Message } from "../interfaces/Chat"
-import { getSocket, setSocket } from "./socket"
+// import { getSocket, setSocket } from "./socket"
+import { getSocket, setSocket } from "./socket copy"
 import { getAnswer } from "./getAnswer"
 
 export const processUserMessage = async (userMessage: string, currMessages: Message[], setMessages: Dispatch<SetStateAction<Message[]>>) => {
@@ -14,18 +15,12 @@ export const processUserMessage = async (userMessage: string, currMessages: Mess
     setMessages(updatedMessage)
     const socket = getSocket()
     if (socket) {
-        socket.emit('client', userMessage)
-        socket.on('server', (message: string) => {
-        console.log('receieved message from server', message)
-    })
+        socket.send(JSON.stringify({ type:'client', payload: userMessage}))
     } else {
         const aiResponse = await getAnswer(updatedMessage)
         if (aiResponse.content === '*SERIOUS*') {
             // Initialize socket connection here
             const socket = setSocket(updatedMessage, setMessages)
-            socket.on('connect', () => {
-                console.log('connected to socket server, now every message will be sent to the socket server')
-            })
             console.log('SOCKET HAS BEEN SET', socket)
             // Need to move the client to a websocket connection
             setMessages(prev => {

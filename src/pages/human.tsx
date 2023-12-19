@@ -3,7 +3,8 @@ import { ChatContainer } from "../components/ChatContainer";
 import { UserInput } from "../components/UserInput";
 import { Message } from "../interfaces/Chat";
 import { useRouter } from "next/router";
-import { setSocket } from "../utils/socket";
+// import { setSocket } from "../utils/socket";
+import { setSocket } from "../utils/socket copy";
 
 export default function Human() {
   const router = useRouter()
